@@ -2,7 +2,7 @@
 
 typeWriter is a vanilla-javascript library for simulating keyboard typing effect.
 
-[SEE DEMO](http://specktator.github.io/typewriter/demo/demo.html);
+[DEMO](http://totallynoob.com/typewriterjs/demo.html);
 
 #usage: 
 
