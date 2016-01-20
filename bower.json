@@ -1,0 +1,24 @@
+{
+  "name":"typewriter",
+  "description": "Physics-like animations for pretty particles",
+  "authors": [
+    "specktator <specktator@totallynooob.com>"
+  ],
+  "keywords": [
+    "typing",
+    "keyboard",
+    "simulation",
+    "effect"
+  ],
+  "authors": [
+    "Betty Beta <bbeta@example.com>"
+  ],
+  "license": "AGPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

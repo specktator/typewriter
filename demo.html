@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>typewriter.js - keyboard typing simulation - vanilla javascript</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+		  background-color:black;
+		  color:yellowgreen;
+		  font-size:24px;
+		}
+		div#t{
+		  position:relative;
+		  width:80%;
+
+		  padding: 1%;
+		}
+		pre#f{
+		  	width:100%;
+		  	positon:relative;
+		  	border:1px solid red;
+			white-space: pre-wrap;       /* css-3 */
+		 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		 	white-space: -pre-wrap;      /* Opera 4-6 */
+		 	white-space: -o-pre-wrap;    /* Opera 7 */
+		 	word-wrap: break-word;  
+		}
+		pre#typewriter{
+		  	width:100%;
+		  	positon:relative;
+		  	border:1px solid magenta;
+			white-space: pre-wrap;       /* css-3 */
+		 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		 	white-space: -pre-wrap;      /* Opera 4-6 */
+		 	white-space: -o-pre-wrap;    /* Opera 7 */
+		 	word-wrap: break-word;  
+		}
+	</style>
+</head>
+<body>
+	<div id="t">
+		<pre id="typewriter"></pre>
+	</div>
+	<script type="text/javascript" src="typewriter.js"></script>
+</body>
+</html>
