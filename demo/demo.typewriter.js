@@ -34,7 +34,8 @@ Github:  https://github.com/specktator/typewriter
 */
 
 typeWriter = (function(){
-  var defSettings, settings, timeSets;
+  var defSettings, settings, timeSets, local;
+  local = {};
  
   /* name : [max ms, min ms] */
   timeSets= {
@@ -62,7 +63,7 @@ typeWriter = (function(){
       e = document.getElementById( settings.id );
       e.innerHTML += char;
       if(settings.autoScroll === true){
-        document.scrollTop = e.scrollHeight;
+        e.scrollTop = e.scrollHeight;
       }
       settings.index += 1;
       var t = setTimeout('writer()', Math.floor( (Math.random() * settings.timeSetting[0]) + settings.timeSetting[1]));
@@ -99,13 +100,13 @@ typeWriter = (function(){
     
   };
 
-  this.type = function (settings){
+  local.type = function (settings){
     settingsCheck(settings);
     writer();
 
   };
   
-  return this;
+  return local;
   
 } () );
 
