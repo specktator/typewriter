@@ -1,73 +1,99 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Typewriter by specktator</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Typewriter</h1>
-        <p>typeWriter is a javascript library for simulating keyboard typing effect.</p>
+    <section class="page-header">
+      <h1 class="project-name">Typewriter</h1>
+      <h2 class="project-tagline">typeWriter is a javascript library for simulating keyboard typing effect.</h2>
+      <a href="https://github.com/specktator/typewriter" class="btn">View on GitHub</a>
+      <a href="https://github.com/specktator/typewriter/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/specktator/typewriter/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/specktator/typewriter">View the Project on GitHub <small>specktator/typewriter</small></a></p>
+    <section class="main-content">
+      <h1>
+<a id="typewriter" class="anchor" href="#typewriter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>typewriter</h1>
 
+<p>typeWriter is a vanilla-javascript library for simulating human keyboard typing effect.</p>
 
-        <ul>
-          <li><a href="https://github.com/specktator/typewriter/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/specktator/typewriter/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/specktator/typewriter">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="typewriter" class="anchor" href="#typewriter" aria-hidden="true"><span class="octicon octicon-link"></span></a>typewriter</h1>
-
-<p>typeWriter is a vanilla-javascript library for simulating keyboard typing effect.</p>
-
-<p><a href="http://totallynoob.com/typewriterjs/demo.html">DEMO</a>;</p>
+<p><a href="http://totallynoob.com/typewriterjs/demo.html">DEMO</a></p>
 
 <h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage:</h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
 
-<pre><code>settingsObejct = {
-    id: 'my-Element-Id', // @string, default value = 'typewriter'
-    text: `multiline
-      text to type`, //multiline text is acceptable- ES6
-    index:5 // starting character
-    timeSetting: 'fast' // @string , see default values timeSets
+<div class="highlight highlight-source-shell"><pre>$ bower install typewriterjs</pre></div>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>usage:</h1>
+
+<div class="highlight highlight-source-js"><pre>settingsObejct <span class="pl-k">=</span> {
+    id<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-Element-Id<span class="pl-pds">'</span></span>, <span class="pl-c">// @string, default value = 'typewriter'</span>
+    text<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">`</span>multiline</span>
+<span class="pl-s">      text to type<span class="pl-pds">`</span></span>, <span class="pl-c">//multiline text is acceptable- ES6</span>
+    index<span class="pl-k">:</span><span class="pl-c1">5</span> <span class="pl-c">// starting character - by default is 0</span>
+    timeSetting<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fast<span class="pl-pds">'</span></span>, <span class="pl-c">// @string , see default values timeSets</span>
+    autoScroll<span class="pl-k">:</span><span class="pl-c1">false</span>  <span class="pl-c">// auto scrolling is by default enabled</span>
 };
-typeWriter.type(settingsObject);
-</code></pre>
+<span class="pl-smi">typeWriter</span>.<span class="pl-c1">type</span>(settingsObject);</pre></div>
 
-<p>NOTE: you can skip any property in settings except text.
-NOTE2: run on document ready.</p>
+<p><strong>NOTE</strong>: you can skip any property in settings except text.</p>
+
+<p><strong>NOTE2</strong>: run on document ready.</p>
+
+<h1>
+<a id="use-cases" class="anchor" href="#use-cases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use cases:</h1>
+
+<p><strong>typewriter.js</strong> can be used as:</p>
+
+<ul>
+<li>module to auto type song's lyrics</li>
+<li>helper module for applications targeted to people with disabilities</li>
+<li>simple typing effect on a website</li>
+</ul>
+
+<h1>
+<a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How does it work</h1>
+
+<p>Simply picks a random integer between two numbers and prints one-by-one the letters of the provided text, until the text length is exhausted.</p>
+
+<h1>
+<a id="custom-settings" class="anchor" href="#custom-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Custom settings</h1>
+
+<p><code>timeSetting</code> property presets are 'breeze', 'fast', 'slow' and 'momstyping' (faster to slower scale). User-defined <code>timeSetting</code> can be set in the following way:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">typewriter</span>.<span class="pl-c1">type</span>({
+    <span class="pl-k">...</span>
+    timeSetting<span class="pl-k">:</span>[max_miliseconds, min_miliseconds]
+    <span class="pl-k">...</span>
+    });</pre></div>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>github <a href="https://github.com/specktator" class="user-mention">@specktator</a>
 twitter <a href="https://twitter.com/specktator_">@specktator_</a></p>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>jabber me or mail me : <a href="mailto:specktator@totallynoob.com">specktator@totallynoob.com</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/specktator">specktator</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/specktator/typewriter">Typewriter</a> is maintained by <a href="https://github.com/specktator">specktator</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+    </section>
+
+  
   </body>
 </html>
